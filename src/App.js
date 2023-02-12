@@ -1,12 +1,12 @@
 import { isCursorAtEnd } from "@testing-library/user-event/dist/utils";
 import "./App.css";
 import Navbar from "./Components/Navbar";
-import About from "./Components/About";
+// import About from "./Components/About";
 import TextForm from "./Components/TextForm";
 import React, { useState } from "react";
 import Alert from "./Components/Alert";
 
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+// import { BrowserRouter, Routes, Route} from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -37,7 +37,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
         <Navbar
           title="React Tots"
           aboutText="About"
@@ -46,22 +46,21 @@ function App() {
         ></Navbar>
         <Alert alert={alert}></Alert>
         <div className="container">
-          <Routes>
-            <Route exact path="/about" element={<About />}></Route>
-            <Route
-              exact path="/"
-              element={
+          {/* <Routes> */}
+            {/* <Route exact path="/about" element={<About />}></Route> */}
+            {/* <Route */}
+              {/* exact path="/" */}
+              {/* element={ */}
                 <TextForm
                   heading="Enter text to analyze"
                   mode={mode}
                   showAlert={showAlert}
                 />
-              }
-            ></Route>
-          </Routes>
+              {/* } */}
+          {/* //   ></Route>
+          // </Routes> */}
         </div>
-        ;
-      </BrowserRouter>
+      {/* </BrowserRouter> */}
     </>
   );
 }
